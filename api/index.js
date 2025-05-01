@@ -17,14 +17,15 @@ const secret = "rnsaho";
 app.use(cookieParser());  // Add cookie-parser middleware
 app.use(cors({
   credentials: true,
-  origin: 'https://inkspire-client.onrender.com'  // Allow requests from your frontend
+  origin: 'https://inkspire-client.onrender.com'  // 
+  // origin: 'http://localhost:3000'
 }));
 app.use(express.json());
 app.use(cookieParser());
 app.use('/uploads', express.static(__dirname + '/uploads')); 
 
 app.get('/', (req, res) => {
-  res.send('🎉 Hello from the API!');
+  res.send('🎉 Hello, Samroy from the API!');
 });
 
 app.post('/register', async (req, res) => {
@@ -191,7 +192,7 @@ async function startServer() {
     await mongoose.connect('mongodb+srv://samroy963roshan:samroypassword@test.7glhz3i.mongodb.net/?retryWrites=true&w=majority&appName=Test');
     console.log('✅ Connected to MongoDB');
     app.listen(4000, () => {
-      console.log('🚀 Server is running on https://inkspire-api.onrender.com/');
+      console.log('🚀 Server is running on http://localhost:4000');
     });
   } catch (err) {
     console.error('❌ Failed to connect to MongoDB:', err);
