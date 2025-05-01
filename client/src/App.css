@@ -1,0 +1,417 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 20px 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #aaa;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e2a38;
+  padding: 15px 30px;
+  color: #f39c12;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  margin-top: -100px;
+  margin-left: -168px;
+  margin-right: -168px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #f39c12;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  padding: 8px 16px;
+  color: #f39c12;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 1rem;
+}
+
+.btn:hover {
+  text-decoration: underline;
+}
+
+div.post {
+  display: flex;
+  gap: 30px; 
+  grid-template-columns: 1fr;
+  padding: 20px;
+  margin: 30px 0;
+  align-items: flex-start;
+  border-radius: 10px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3); 
+}
+
+div.image {
+  flex: 1;
+  max-width: 40%; /* Limit the image width */
+}
+
+div.texts {
+  flex: 2;
+  text-align: left;
+  padding: 15px; /* Padding for better spacing */
+}
+
+div.image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+div.post div.texts h2 {
+  font-size: 1.5rem;
+  text-decoration: none;
+  margin-bottom: 5px;
+  color: #f39c12; /* Change text color for headings */
+}
+
+div.post div.texts a{
+  text-decoration: none;
+  color: inherit;
+}
+
+div.post div.texts p {
+  font-size: 1rem;
+  color: #ccc; 
+  line-height: 1.6; /* Make text more readable */
+}
+
+div.post div.texts a {
+  color: #f39c12;
+  text-decoration: none;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+div.post div.texts a:hover {
+  text-decoration: underline;
+}
+
+.info {
+  display: flex;
+  align-items: center; 
+  gap: 10px; 
+  margin-top: 10px;
+}
+
+.author, time {
+  display: inline;
+  color: #aaa;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+time{
+  margin-top: 21px;
+}
+
+form.register, form.login {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #f0f8ff;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.signupText {
+  display: block;
+  margin-bottom: 20px;
+  width: 90%;
+  padding: 12px 15px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+  font-size: 16px;
+  transition: border 0.3s;
+}
+
+.signupText:focus {
+  outline: none;
+  border-color: #007BFF;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+.signupBtn {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  padding: 12px;
+  background-color: #0056b3;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  margin-left: 153px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.signupBtn:hover {
+  background-color: #f39c12;
+  color: white
+}
+
+.signupHeading{
+  color: #f39c12;
+  text-align: center;
+} 
+
+
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+form {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+}
+
+.form-heading {
+  color: #f39c12;
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.titlePost, .summaryPost,
+.filePost, .textPost {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.textPost {
+  resize: vertical;
+}
+
+.submit-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #f39c12;
+}
+
+.delBtn {
+  background-color: #ff4000;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  margin: 15px 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.delBtn:hover {
+  background-color: #f39c12;
+}
+
+.postPage {
+  max-width: -800px;
+  margin-left: -99px;
+  margin-right: -99px;
+  padding: 40px;
+}
+
+.postpageImage {
+  margin-left: -100px;
+  padding: 20px;
+  padding-left: 60px;;
+  background-color: #121212;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.05);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+
+.postpageHeading {
+  text-align: center;
+  font-size: 2rem;
+  margin: 20px 0 10px;
+  color: #f39c12;
+}
+
+.postPage .postpageTime {
+  text-align: center;
+  display: block;
+  font-size: 0.85rem;
+  color: #aaaaaa;
+  margin-bottom: 5px;
+}
+
+.postPage .postpageAuthor {
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #cccccc;
+  margin-bottom: 20px;
+}
+
+.postpageAuthor {
+  font-weight: bold;
+}
+
+.description {
+  padding-top: 20px;
+  padding-right: 80px;
+  padding-left: -160px;
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  color: #e0e0e0;
+  background-color: #121212;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+ .updateBtn {
+  width: 20px;
+  height: 20px;
+} 
+
+
+/* Tablet (<= 768px) */
+@media (max-width: 768px) {
+  /* Stack posts vertically */
+  .post {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Make image full width */
+  .post .image {
+    max-width: 100%;
+    width: 100%;
+  }
+  .post .image img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Text section full width */
+  .post .texts {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  /* Reduce header padding */
+  .navbar {
+    padding: 10px 20px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 80px 10px 10px;
+  }
+
+  .post {
+    gap: 15px;
+    padding: 15px 0;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  .summary {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .navbar .logo,
+  .navbar .btn {
+    font-size: 0.9rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
