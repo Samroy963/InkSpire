@@ -25,7 +25,7 @@ app.use(cookieParser());
 app.use('/uploads', express.static(__dirname + '/uploads')); 
 
 app.get('/', (req, res) => {
-  res.send('🎉 Hello, Samroy from the API!');
+  res.send('🎉 Hello, Samroy Greetings!!! from API!');
 });
 
 app.post('/register', async (req, res) => {
