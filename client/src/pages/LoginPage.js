@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Navigate } from "react-router-dom";
 import { useContext } from "react";
 import { UserContext } from "./UserContext"; 
+import BASE_URL from "../config"; 
 
 export default function LoginPage() {
   const [username, setUsername] = useState('');
@@ -12,7 +13,7 @@ export default function LoginPage() {
   async function login(ev) {
     ev.preventDefault();
     try{
-      const response = await fetch('http://localhost:4000/login', {  // Corrected URL to /login
+      const response = await fetch(`${BASE_URL}/login`, {  // Corrected URL to /login
       method: 'POST',
       body: JSON.stringify({ username, password }),
       headers: { 'Content-Type': 'application/json' },
