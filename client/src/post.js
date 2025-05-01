@@ -1,5 +1,6 @@
 import { formatISO9075 } from "date-fns";
 import { Link } from "react-router-dom";
+import BASE_URL from "./config"; 
 
 export default function Post({
   _id,
