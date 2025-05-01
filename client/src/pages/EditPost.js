@@ -33,7 +33,7 @@ export default function EditPost() {
     if (files?.[0]) {
       data.set("file", files?.[0]);
     }
-    const response = await fetch("http://localhost:4000/post", {
+    const response = await fetch(`${BASE_URL}/post`, {
       method: "PUT",
       body: data,
       credentials: "include",
@@ -47,7 +47,7 @@ export default function EditPost() {
 
   const handleDelete = async () => {
     try {
-      await fetch(`http://localhost:4000/post/${id}`, {
+      await fetch(`${BASE_URL}/post/${id}`, {
         method: "DELETE",
         credentials: "include", // important for sending auth cookie
       });
